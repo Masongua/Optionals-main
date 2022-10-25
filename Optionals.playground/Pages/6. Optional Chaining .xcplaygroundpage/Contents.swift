@@ -17,9 +17,9 @@ print(firstUppercasedCharacter2) // prints p
 
 /*But this will crash if the optional is nil: */
 
-let instrument3: String? = nil
-let firstUppercasedCharacter3 = instrument3!.uppercased().first // Fatal error: Unexpectedly found nil while unwrapping an Optional value
-print(firstUppercasedCharacter3)
+//let instrument3: String? = nil
+//let firstUppercasedCharacter3 = instrument3!.uppercased().first // Fatal error: Unexpectedly found nil while unwrapping an Optional value
+//print(firstUppercasedCharacter3)
 
 /* Fortunately Swift gives us a way to safely chain different calls on an optional using optional chaining. By replacing the ! operator with the ? operator, our code can no longer crash. If the optional is nil, then the entire expression will evaluate to nil.
 */
@@ -48,6 +48,19 @@ var studentGovernment = [
     "treasurer": "Diego"
 ]
 
+
+
 // Write your code below 🏛️
+if let studentGovernment1 = studentGovernment.updateValue("bruh", forKey: "president"){
+    let coun = studentGovernment1.count
+    print("The presidents name is \(coun) characters long")
+    
+}
+if let studentGovernment2 = studentGovernment.updateValue("nah", forKey: "vicePresident") {
+    let count = studentGovernment2.count
+    print("The vice president's name is \(count) characters long")
+} else {
+    print("There is no vice president")
+}
 
 //: [Next](@next)

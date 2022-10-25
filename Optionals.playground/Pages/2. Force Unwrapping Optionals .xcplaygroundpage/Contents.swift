@@ -33,8 +33,13 @@ print(sum)
  * Write an if statement that checks if connectingFlightDistance is not nil.
  * In the body of the if statement, define a constant totalFlightDistance assigned to the sum of flightDistance and connectingFlightDistance. Then, print the totalFlightDistance.
  */
+var flightDistance: Int = 1000
+var connectingFlightDistance: Int? = 2000
 
-
+if connectingFlightDistance != nil{
+    let totalFlightDistance = flightDistance + connectingFlightDistance!
+    print(totalFlightDistance)
+}
 
 
 //: [Next](@next)

@@ -33,6 +33,8 @@ var firstLetter: Character = "a"
 3. Reassign hatColor to nil.
 4. Print the value of hatColor. The console should display some warnings letting us know that there’s more we can do to work with optionals!
 */
-
+var hatColor: String?
+hatColor = "blue"
+hatColor = ""
 
 //: [Next](@next)
