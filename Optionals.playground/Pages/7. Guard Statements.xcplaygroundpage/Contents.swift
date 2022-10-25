@@ -51,33 +51,38 @@ func addOptionals(shouldPrintSum: Bool) {
  */
 
 func runProgram() {
-  let language = "Swift"
-  let firstRelease: Int? = 2014
-  let website: String? = "swift.org"
-  let designer: String? = "Chris Lattner"
-  let shouldDisplayMessage = true
-
-  // Refactor the code below to use a single guard statement
-
-  if let unwrappedRelease = firstRelease {
-      if let unwrappedWebsite = website {
-          if let unwrappedDesigner = designer {
-              if shouldDisplayMessage {
-                  let message =
-                      """
-                      \(language) was first released in \(unwrappedRelease).
-                      Its website can be found at \(unwrappedWebsite).
-                      It was designed by \(unwrappedDesigner).
-                      """
-                  print(message)
-              }
-          }
-      }
-  }
+    let language = "Swift"
+    let firstRelease: Int? = 2014
+    let website: String? = "swift.org"
+    let designer: String? = "Chris Lattner"
+    let shouldDisplayMessage = true
+    
+    // Refactor the code below to use a single guard statement
+    
+    //  if let unwrappedRelease = firstRelease {
+    //      if let unwrappedWebsite = website {
+    //          if let unwrappedDesigner = designer {
+    //              if shouldDisplayMessage {
+    //                  let message =
+    //                      """
+    //                      \(language) was first released in \(unwrappedRelease).
+    //                      Its website can be found at \(unwrappedWebsite).
+    //                      It was designed by \(unwrappedDesigner).
+    //                      """
+    //                  print(message)
+    //              }
+    //          }
+    //      }
+    //  }
+    //}
+    
+    guard let unwrappedRelease = firstRelease, let unwrappedWebsite = website, let unwrappedDesigner = designer, shouldDisplayMessage else {
+        return
+    }
+    let message = "\(language) was first released in \(unwrappedRelease). Its website can be found at \(unwrappedWebsite). It was designed by \(unwrappedDesigner)"
+    print(message)
+    
 }
-
-guard let 
-
 
 runProgram()
 //: [Next](@next)
